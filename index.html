@@ -19,12 +19,12 @@
            
                 <div v-for="(item, index) in slides" 
                 class="slide"
-                :class="slideCounter === index ? 'active' : ''"
+                :class= " isActive === true ? 'active' : '' "
                 >
                     <img :src="item.image" alt="">
                 </div>
 
-                <i class="arrow arrow__left fa-solid fa-chevron-left"></i>
+                <i  @click="autoPlayAvanti" class="arrow arrow__left fa-solid fa-chevron-left"></i>
                 <i class="arrow arrow__right fa-solid fa-chevron-right"></i>  
                 
                 <!-- <div class="play-bar">

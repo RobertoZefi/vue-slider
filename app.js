@@ -29,6 +29,7 @@ const { createApp } = Vue
         ],
 
         slideCounter: 0,
+        isActive: true,
       }
     }, 
 
@@ -36,19 +37,19 @@ const { createApp } = Vue
 
         autoPlayAvanti(){
           console.log('ciao')
-          let slideCorrente = slideElement[slideCounter]
-          slideCorrente.classList.remove('active')
+          let slideCorrente = this.slides[this.slideCounter]
+          this.isActive = false
       
-          if (this.slideCounter === this.slides.length - 1){
+          /*if (this.slideCounter === this.slides.length - 1){
               this.slideCounter = 0
           } else {
               this.slideCounter++
           }
           
-          //slideCounter += 1
+          //slideCounter += 1*/
       
-          let slideSuccessiva = slideElement[slideCounter]
-          slideSuccessiva.classList.add('active')
+          let slideSuccessiva = this.slides[this.slideCounter]
+          isActive = true
           
           console.log(slideCounter)
           
