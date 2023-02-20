@@ -22,6 +22,10 @@
                 :class= " slideCounter === index ? 'active' : '' "
                 >
                     <img :src="item.image" alt="">
+                    <div class="slide-text">
+                        <h3 class="slide__title">{{item.title}}</h3>
+                        <p class="slide__description">{{item.text}}</p> 
+                    </div>
                 </div>
 
                 <i @click="autoPlayIndietro" class="arrow arrow__left fa-solid fa-chevron-left"></i>
