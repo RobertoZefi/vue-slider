@@ -29,31 +29,49 @@ const { createApp } = Vue
         ],
 
         slideCounter: 0,
-        isActive: true,
       }
     }, 
 
     methods: {
 
         autoPlayAvanti(){
-          console.log('ciao')
-          let slideCorrente = this.slides[this.slideCounter]
-          this.isActive = false
+            console.log('ciao')
+            this.slides[this.slideCounter]
+            this.isActive = false
       
-          /*if (this.slideCounter === this.slides.length - 1){
-              this.slideCounter = 0
-          } else {
-              this.slideCounter++
-          }
+            if (this.slideCounter === this.slides.length - 1){
+                this.slideCounter = 0
+            } else {
+                this.slideCounter++
+            }
           
-          //slideCounter += 1*/
+            //this.slideCounter += 1
       
-          let slideSuccessiva = this.slides[this.slideCounter]
-          isActive = true
+            this.slides[this.slideCounter]
+            isActive = true
           
-          console.log(slideCounter)
-          
-      }
+          //console.log(slideCounter)
+        },
+
+        autoPlayIndietro(){
+
+            console.log('ciao')
+            this.slides[this.slideCounter]
+            this.isActive = false
+  
+            if (this.slideCounter === 0){
+                this.slideCounter = this.slides.length - 1
+            } else {
+                this.slideCounter--
+            }
+      
+            //this.slideCounter += 1
+  
+            this.slides[this.slideCounter]
+            isActive = true
+      
+            //console.log(slideCounter)
+        }
 
     }
   }).mount('#app')
